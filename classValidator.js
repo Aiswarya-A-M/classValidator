@@ -9,25 +9,25 @@ import {
     IsDate,
     Min,
     Max,
+    isString,
+    minLength,
+    max,
   } from 'class-validator';
-  export class Post {
-    @Length(10, 20)
-    userName: string;
   
-    @Contains('hello')
-    text: string;
-  
-    @IsInt()
-    @Min(0)
-    @Max(10)
-    rating: number;
-  
+  export class user {
+    @isString()
+    userName;
+
     @IsEmail()
-    email: string;
+    userEmail;
+    
+    @min(5)
+    userName;
+    userPassword;
+
+    @max(15)
+    userName;
+    userPassword;
+
+}
   
-    @IsFQDN()
-    site: string;
-  
-    @IsDate()
-    createDate: Date;
-  }
